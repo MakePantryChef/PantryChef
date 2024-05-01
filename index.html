@@ -5,6 +5,7 @@
         <style>
             .remove-button {
                 margin-left: 10px;
+                display: none; /* Hide the remove button by default */
             }
         </style>
     </head>
@@ -15,14 +16,16 @@
         <p>Stock Your Pantry Below</p>
         <form>
             <input type="text" id="ingredientInput">
-            <button type="button">Add Ingredient</button>
+            <button type="button" id="addButton">Add Ingredient</button>
         </form>
         
         <ul id="ingredientList"></ul>
 
-        <button type="button">Let's Cook</button>
+        <button type="button" id="generateButton">Let's Cook</button>
+        <button type="button" id="removeButton">Remove Items</button>
+
+        
     </body>
 
     <script src="scripts.js"></script>
-
 </html>
