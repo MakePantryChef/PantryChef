@@ -7,6 +7,10 @@
                 margin-left: 10px;
                 display: none; /* Hide the remove button by default */
             }
+            textarea {
+                height: 500px;
+                width: 500px;
+            }
         </style>
     </head>
 
@@ -23,6 +27,11 @@
 
         <button type="button" id="generateButton">Let's Cook</button>
         <button type="button" id="removeButton">Remove Items</button>
+        <br>
+        <textarea
+        id="output-box" 
+        placeholder="Recipe Loading..." 
+        ></textarea>
 
         
     </body>
