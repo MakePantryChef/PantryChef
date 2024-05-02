@@ -41,9 +41,12 @@ ingredientList.addEventListener('click', function(event) {
     }
     
 });
-const ingredientString = ingredients.toString();
 
 generateButton.addEventListener('click', async() => {
+    const ingredientString = Array.from(ingredientList.children)
+        .map(item => item.textContent.split('Remove')[0].trim())
+        .join(', ');
+
     const outputBox = document.getElementById("output-box")
 
     const response = await fetch(
