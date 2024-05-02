@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>PantryChef</title>
         <style>
             .remove-button {
+                color: white;
+                background-color: red;
+                border-radius: 10px;
                 margin-left: 10px;
                 display: none; /* Hide the remove button by default */
             }
@@ -12,21 +16,37 @@
                 width: 500px;
             }
         </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         
-        <h1>PantryChef</h1>
+        <h1>PantryChef &#129388</h1>
+        <hr class="titleLine">
         <p>Stock Your Pantry Below</p>
-        <form>
-            <input type="text" id="ingredientInput">
-            <button type="button" id="addButton">Add Ingredient</button>
-        </form>
         
+        <form class="input">
+            <input type="text" id="ingredientInput">
+            
+            <div class="buttons">
+                <button type="button" id="addButton">+</button>
+                <button type="button" id="removeButton">-</button>
+                <button type="button" id="generateButton">Let's Cook &#127869</button>
+                
+            </div>
+
+            <br>
+            <p>Make a grocery run?</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+        </form>
+        <h2>Ingredients</h2> 
         <ul id="ingredientList"></ul>
 
-        <button type="button" id="generateButton">Let's Cook</button>
-        <button type="button" id="removeButton">Remove Items</button>
+        
         <br>
         <textarea
         id="output-box" 

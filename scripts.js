@@ -11,7 +11,7 @@ addButton.addEventListener('click', function() {
         var listItem = document.createElement('li');
         listItem.textContent = ingredient;
         var removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
+        removeButton.textContent = 'X';
         removeButton.classList.add('remove-button');
         listItem.appendChild(removeButton);
         ingredientList.appendChild(listItem);
