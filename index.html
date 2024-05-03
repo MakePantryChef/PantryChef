@@ -9,18 +9,24 @@
                 background-color: red;
                 border-radius: 10px;
                 margin-left: 10px;
-                display: none; /* Hide the remove button by default */
+                display: none;
             }
             textarea {
                 height: 500px;
                 width: 500px;
+            }
+            .output-box {
+                /* display: none */
             }
         </style>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        
+        <div id="loading-screen">
+            <img src="loading.gif" alt="Loading" width="200" height="200">
+          </div>
+
         <h1>PantryChef &#129388</h1>
         <hr class="titleLine">
         <p>Stock Your Pantry Below</p>
@@ -46,13 +52,15 @@
         <h2>Ingredients</h2> 
         <ul id="ingredientList"></ul>
 
-        
-        <br>
-        <textarea
-        id="output-box" 
-        placeholder="Recipe Loading..." 
-        ></textarea>
-
+        <div class="output-container">
+            <div id="imageContainer"></div>
+            <br>
+            <textarea
+            class="output-box"
+            id="output-box" 
+            placeholder="Recipe Loading..." 
+            ></textarea>
+        </div>
         
     </body>
 
