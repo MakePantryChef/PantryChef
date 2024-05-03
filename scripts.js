@@ -47,8 +47,13 @@ const loadingScreen = document.getElementById('loading-screen');
 outputBox.style.visibility = "hidden";
 
 generateButton.addEventListener('click', async() => {
+    var container = document.getElementById("imageContainer");
+    container.innerHTML = '';
     loadingScreen.style.visibility = 'visible';
+
     if (ingredients.length > 0) {
+        var img = document.createElement('img');
+        
         const ingredientString = Array.from(ingredientList.children)
             .map(item => item.textContent.split('X')[0].trim())
             .join(', ');
@@ -71,11 +76,9 @@ generateButton.addEventListener('click', async() => {
         outputBox.value = response;
         const textArray = response.split("Ingredients");
         const dishName = textArray[0];
-        var img = document.createElement('img');
         img.src = `https://noggin.rea.gent/upper-leopard-9184?key=rg_v1_utr7aba076ighlle108pv6ywmygpvscv001i_ngk&food=${dishName}`;
         img.width = 500;
         img.height = 500;
-        var container = document.getElementById("imageContainer");
         container.appendChild(img);
 
         outputBox.style.visibility = "visible";
